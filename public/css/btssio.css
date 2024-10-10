@@ -14,3 +14,12 @@
     text-align: center;
     align-items: center;
 }
+
+body{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+body.loaded{
+    opacity: 1;
+}
