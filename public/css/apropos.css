@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-position: center;
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Couleur noire avec 50% d'opacité */
+    z-index: -1; /* Place l'overlay derrière le contenu */
+  }
+
+.Lib-Lang{
+    position: relative;
+    align-content: center;
+    align-items: center;
+    color: white;
+    border-color: white;
+    border: 1px,1px,1px,1px;
+}
+
+.dev-lang {
+    list-style-type: none;
+    width: 40%;
+    margin-left: 5%;    
+}
+
+.dev-lang li{
+    margin-top: 2%;
+}
+
+.dev-lib{
+    width: 40%;
+    margin-left: 50%;
+    transform: translateY(-685%);
+}
+
+ul{
+    list-style-type: none;
+}
+
+#change-language{
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.01);
+    color: white;
+    border-color: rgba(0, 0, 0, 0.01);
+    cursor: pointer;
+}
+
+h1 {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+
+/* Progress Bar */
+.progressbar-wrapper {
+    background-color: #000000;
+    color: white;
+    border-radius: 15px;
+    width: 100%;
+  }
+  
+  .progressbar {
+    background-color: #ae00ff;
+    color: white;
+    padding: 1rem;
+    text-align: right;
+    font-size: 20px;
+    border-radius: 15px;
+  }
+  
+
+    
+  .html {
+    width: 85%;
+  }
+  .css {
+    width: 70%;
+  }
+  .js {
+    width: 65%;
+  }
+  .c {
+    width: 40%;
+  }
+  .python {
+    width: 90%;
+  }  
+  .java {
+    width: 10%;
+  }
+  .express{
+    width: 75%;
+  }

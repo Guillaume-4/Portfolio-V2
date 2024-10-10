@@ -1,0 +1,64 @@
+{
+    "fr": {
+      "header": {
+        "home": "Accueil",
+        "about": "À propos",
+        "contact": "Me Contacter",
+        "btssio": "BTS-SIO",
+        "eee": "École et Entreprise",
+        "missions": "Missions",
+        "projects": "Projets",
+        "VeilleTechno": "Veille Technologique",
+        "change": "🇬🇧 English"
+      },
+      "footer": {
+        "privacy_policy": "Politique de confidentialité",
+        "terms_of_service": "Conditions d'utilisation"
+      },
+      "home_page": {
+        "welcome_me": "<h1> BLAS Guillaume </h1>",
+        "welcome_message": "Apprentis Développeur BTS 2ème année",
+        "learn_more": "En savoir plus"
+      },
+      "about_page": {
+        "lib": "Bibliotèques"
+      },
+      "contact_page": {
+        "title": "Contactez-nous",
+        "phone": "Téléphone",
+        "email": "E-mail",
+        "send_message": "Envoyer le message"
+      }
+    },
+    "en": {
+      "header": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact Me",
+        "btssio": "BTS-SIO",
+        "eee": "School & Jobs",
+        "missions": "Missions",
+        "projects": "Projects",
+        "VeilleTechno": "Technology Watch",
+        "change": "🇫🇷 Français"
+      },
+      "footer": {
+        "privacy_policy": "Privacy Policy",
+        "terms_of_service": "Terms of Service"
+      },
+      "home_page": {
+        "welcome_me": "<h1> BLAS Guillaume </h1>",
+        "welcome_message": "Apprentice Developer BTS 2nd year",
+        "learn_more": "Learn more"
+      },
+      "about_page": {
+        "lib":"Libraries"
+      },
+      "contact_page": {
+        "title": "Contact us",
+        "phone": "Phone",
+        "email": "Email",
+        "send_message": "Send Message"
+      }
+    }
+  }

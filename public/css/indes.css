@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url("../img/image-ldc.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Couleur noire avec 50% d'opacité */
+    z-index: -1; /* Place l'overlay derrière le contenu */
+  }
+
+.Infos #welcome-me{
+    position: relative;
+    color: white;
+    margin-top: 10%;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.Infos #welcome-message{
+    color: white;
+    font-size: 2em;
+    margin-top: 1%;
+    font-style: italic;
+}
+
+.Infos{
+    position: relative;
+    text-align: center;
+    align-content: center;
+}
+
+#change-language{
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.01);
+    color: white;
+    border-color: rgba(0, 0, 0, 0.01);
+    cursor: pointer;
+}
+
+h1 {
+    font-family: Tahoma, Verdana, sans-serif;
+}
