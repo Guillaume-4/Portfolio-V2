@@ -21,8 +21,28 @@ app.get('/contact',(req,res)=>{
     res.render("contact")
 })
 
-app.get('/test',(req,res)=>{
-    res.render("apropos")
+app.get('/btssio',(req,res)=>{
+    res.render("btssio")
+})
+
+app.get('/EcoleEtEntreprise',(req,res)=>{
+    res.render("eee")
+})
+
+app.get('/missions',(req,res)=>{
+    res.render("missions")
+})
+
+app.get('/projets',(req,res)=>{
+    res.render("projets")
+})
+
+app.get('/veilletechnologique',(req,res)=>{
+    res.render("veilletechnologique")
+})
+
+app.get('/contact',(req,res)=>{
+    res.render("contact")
 })
 
 app.listen(port,()=>{

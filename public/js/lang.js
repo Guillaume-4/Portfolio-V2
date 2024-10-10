@@ -15,6 +15,7 @@ function loadTranslations(language) {
         document.getElementById('change-language').textContent = data[language].header.change;
         document.getElementById('welcome-me').textContent = data[language].home_page.welcome_me;
         document.getElementById('welcome-message').textContent = data[language].home_page.welcome_message;
+        document.getElementById('TextAbout').textContent = data[language].about_page.TextAbout;
         //document.getElementById('lib').textContent = data[language].about_page.lib;
         //document.getElementById('learn-more-btn').textContent = data[language].home_page.learn_more;
       })

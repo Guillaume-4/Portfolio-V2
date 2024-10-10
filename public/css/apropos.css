@@ -5,7 +5,8 @@
 
 body{
     min-height: 100vh;
-    background-position: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(64,64,64,1) 35%, rgba(71,71,71,1) 65%, rgba(121,121,121,1) 100%);
     margin: 0;
 }
 
@@ -61,44 +62,48 @@ h1 {
     font-family: Tahoma, Verdana, sans-serif;
 }
 
+.box{
+  border: rgb(255, 157, 0) solid 2px;
+  border-radius: 25px;
+  height: 260px;
+  width: 180px;
+  text-align: center;
+  color: white;
+}
 
-/* Progress Bar */
-.progressbar-wrapper {
-    background-color: #000000;
-    color: white;
-    border-radius: 15px;
-    width: 100%;
-  }
-  
-  .progressbar {
-    background-color: #ae00ff;
-    color: white;
-    padding: 1rem;
-    text-align: right;
-    font-size: 20px;
-    border-radius: 15px;
-  }
-  
+#boxContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
 
-    
-  .html {
-    width: 85%;
-  }
-  .css {
-    width: 70%;
-  }
-  .js {
-    width: 65%;
-  }
-  .c {
-    width: 40%;
-  }
-  .python {
-    width: 90%;
-  }  
-  .java {
-    width: 10%;
-  }
-  .express{
-    width: 75%;
-  }
+#TextContainer{
+  width: 70%;
+  height: 300px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  align-content: center;
+}
+
+#TextAbout{
+  font-size: 1.2em;
+}
+
+.TitleBox{
+  border-bottom: rgb(255, 157, 0) solid 2px;
+}
+
+#Container{
+  display: flex;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+i{
+  font-size: 4.2em;
+}

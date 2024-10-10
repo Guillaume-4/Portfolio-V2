@@ -14,6 +14,7 @@ header{
     height: 100px;
     width: 100%;
     color: white;
+    border-bottom: rgb(255, 157, 0) solid 2px;
 }
 
 .div-header li{
@@ -45,4 +46,12 @@ header{
     position: absolute;
     right: 5%;
     top: 30%;
+}
+
+#change-language{
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.01);
+    color: white;
+    border-color: rgba(0, 0, 0, 0.01);
+    cursor: pointer;
 }

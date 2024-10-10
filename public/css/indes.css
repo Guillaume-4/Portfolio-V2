@@ -5,10 +5,8 @@
 
 body{
     min-height: 100vh;
-    background-image: url("../img/image-ldc.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(140deg, rgba(0,0,0,1) 0%, rgba(64,64,64,1) 35%, rgba(71,71,71,1) 65%, rgba(121,121,121,1) 100%);
     margin: 0;
 }
 
@@ -44,14 +42,12 @@ body::before {
     align-content: center;
 }
 
-#change-language{
-    border-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.01);
-    color: white;
-    border-color: rgba(0, 0, 0, 0.01);
-    cursor: pointer;
-}
-
 h1 {
     font-family: Tahoma, Verdana, sans-serif;
+}
+
+#address{
+    color: white;
+    font-size: 1.4em;
+    
 }

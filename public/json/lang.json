@@ -21,7 +21,7 @@
         "learn_more": "En savoir plus"
       },
       "about_page": {
-        "lib": "Bibliotèques"
+        "TextAbout": "Je m'appelle Guillaume, étudiant en 2ème année de BTS SIO (Services Informatiques aux Organisations), option SLAM (Solutions Logicielles et Applications Métier). Spécialisé dans la conception d'applications sur mesure, je me concentre sur l'alliance entre efficacité et innovation. Mon portfolio présente mes projets et compétences, résultat de ma formation et de mon engagement dans le domaine de l'informatique."
       },
       "contact_page": {
         "title": "Contactez-nous",
@@ -52,7 +52,7 @@
         "learn_more": "Learn more"
       },
       "about_page": {
-        "lib":"Libraries"
+        "TextAbout":"My name is Guillaume, and I am a second-year student in a BTS SIO (IT Services for Organizations) program, specializing in SLAM (Software Solutions and Business Applications). Focused on custom application development, I strive to combine efficiency and innovation. My portfolio showcases my projects and skills, which are the result of my education and commitment to the field of IT."
       },
       "contact_page": {
         "title": "Contact us",
