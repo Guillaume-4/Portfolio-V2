@@ -3,10 +3,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/changeroot.js" defer></script>
+    <script src="/js/meretrouver.js" defer></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="../css/indes.css">
 
     <title>Portfolio: Accueil</title>
 </head>
+<div id="MeRetrouver">
+    <div class="liste">
+        <button class="close" id="BoutonClose">X</button>
+        <a href="https://github.com/guillaume-4" target="_blank"><i class="devicon-github-original-wordmark"></i></a>
+        <a href="https://www.linkedin.com/in/guillaume-blas/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
+    </div>
+</div>
 <body>
     <div class="filter-back">
         <%- include('header') %>
@@ -15,6 +24,10 @@
             <h1 id="welcome-me"><%="<h1> BLAS Guillaume </h1>"%></h1>
             <p id="welcome-message">Apprentis Développeur BTS SIO 2ème année</p>
             <p id="address">📍 Saint Lambert, France</p>
+        </div>
+        <div class="DivBouton">
+            <button class="Boutons" onclick="downloadCV()">Télécharger mon CV</button>
+            <button class="Boutons" id="BoutonMeRetrouver">Me Retrouver</button>
         </div>
     </div>
 </body>
