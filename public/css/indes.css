@@ -94,14 +94,14 @@ a{
     display: flex;
     color: white;
     cursor: pointer;
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     align-items: center;
     justify-content: center;
 }
 
 i{
-    font-size: 10em;
+    font-size: 7.5em;
 }
 
 #MeRetrouver{
