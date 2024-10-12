@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/contact.css">
     <script src="../../js/changeroot.js" defer></script>
     <title>Portfolio: Contact</title>
 </head>
@@ -13,5 +15,23 @@
             });
     </script>
     <%- include('header') %>
+
+    <div class="Container">
+        <div class="MailContainer">
+            <i class="fa fa-envelope" style="font-size:36px" id="icon-mail"></i>
+            <p class="Mail">guillaume.blas4@gmail.com</p>
+        </div>
+        <div class="formulaire">
+            <form action="/contact/ok" method="post">
+                <input type="text" placeholder="Nom Complet">
+                <input type="email" placeholder="E-mail">
+                <input type="text" placeholder="Objet">
+                <input type="text" placeholder="Message" id="form-message">
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+        
+    </div>
+
 </body>
 </html>
