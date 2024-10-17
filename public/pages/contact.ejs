@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/contact.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="../../js/changeroot.js" defer></script>
     <title>Portfolio: Contact</title>
 </head>
@@ -22,12 +23,28 @@
             <p class="Mail">guillaume.blas4@gmail.com</p>
         </div>
         <div class="formulaire">
-            <form action="/contact/ok" method="post">
-                <input type="text" placeholder="Nom Complet">
-                <input type="email" placeholder="E-mail">
-                <input type="text" placeholder="Objet">
-                <input type="text" placeholder="Message" id="form-message">
-                <button type="submit">Envoyer</button>
+            <form action="">
+            <input type="text" placeholder="Nom Complet">
+            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="Objet">
+            <input type="text" placeholder="Message" id="form-message">
+            <a href=""><button onclick="sendEmail()">Envoyer </button></a>
+            <script>
+                function sendEmail() {
+                    Email.send({
+                        Host: "sandbox.smtp.mailtrap.io",
+                        Username: "ee5bae028805a6",
+                        Password: "29344fe99608de",
+                        To: 'guillaume.blas4@gmail.com',
+                        From: "hi@demomailtrap.com",
+                        Subject: "Email de Test",
+                        Body: "Ceci est un email de test envoyé en utilisant SMTP.js"
+                    })
+                    .then(function (message) {
+                        alert("Email envoyé avec succès") // Message d'alerte en cas de succès de l'envoi de l'email
+                    });
+                }
+            </script>
             </form>
         </div>
         

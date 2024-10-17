@@ -37,10 +37,12 @@
 
 .Intitule{
     margin-top: 10px;
+    font-size: 1.2em;
 }
 
 .annee{
     margin-top: 5px;
+    font-size: 1.1em;
 }
 
 body{
@@ -50,4 +52,8 @@ body{
 
 body.loaded{
     opacity: 1;
+}
+
+.Explication{
+    font-size: 1em;
 }
