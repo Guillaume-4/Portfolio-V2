@@ -1,14 +1,19 @@
+*{
+    color: white;
+}
+
 .TextContainer{
     display: flex;
+    margin-top: 10px;
     width: 100%;
-    height: 650px;
+    height: 300px;
     justify-content: center;
     align-items: center;
 }
 
 .Text{
     width: 70%;
-    height: 400px;
+    height: 200px;
     font-size: 1.6em;
     color: white;
     text-align: center;
@@ -22,4 +27,31 @@ body{
 
 body.loaded{
     opacity: 1;
+}
+
+.Container{
+    display: flex;
+    width: 100%;
+}
+
+.SLAM{
+    width: 40%;
+    margin-left: 5%;
+}
+
+.SISR{
+    width: 40%;
+    margin-left: 5%;
+}
+
+li{
+    margin-left: 10%;
+}
+
+h3{
+    margin-left: 10%;
+}
+
+.ColorLetters{
+    color: rgb(255, 157, 0);
 }

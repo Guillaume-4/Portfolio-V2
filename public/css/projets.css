@@ -1,0 +1,28 @@
+*{
+    color: white;
+}
+.Projets{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+}
+
+h1{
+    text-align: center;
+    transition: font-size 1s ease-in;
+}
+
+h1:hover{
+    transition: font-size 1s ease-in;
+    font-size: 2em;
+}
+
+.ClientLeger{
+    width: 50%;
+}
+
+.ClientLourd{
+    width: 50%;
+    border-left: rgb(255, 157, 0) solid 2px ;
+}
