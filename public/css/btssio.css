@@ -55,3 +55,8 @@ h3{
 .ColorLetters{
     color: rgb(255, 157, 0);
 }
+
+.Choice{
+    color: gray;
+    margin-left: 50px;
+}
