@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
+const {SECRETKEY} = require("./config")
 
 app.set("views", path.join(__dirname + "/public/pages"));
 app.set("view engine", "ejs");
@@ -32,7 +33,7 @@ app.get("/missions", async (req, res) => {
   try {
     let response = await fetch("https://api.github.com/users/Guillaume-4/repos", {
       headers: {
-        Authorization: 'token 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'
+        Authorization: `token ${SECRETKEY}`
       }
     });
     
@@ -49,12 +50,12 @@ app.get("/missions", async (req, res) => {
       getRepo.map(async (element) => {
         let languageResponse = await fetch(element.languages_url, {
           headers: {
-            Authorization: 'token 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'
+            Authorization: `token ${SECRETKEY}`
           }
         });
         let fetchimage = await fetch(`${element.url}/contents/portfolio_banner.png`,{
           headers: {
-            Authorization: 'token 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'
+            Authorization: `token ${SECRETKEY}`
           }
         });
 
