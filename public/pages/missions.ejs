@@ -4,34 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../js/changeroot.js" defer></script>
+    <link rel="stylesheet" href="../../css/missions.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Portfolio: Missions</title>
 </head>
 <body>
+    <div class="background"></div>
     <script>
         window.addEventListener('load', function() {
             document.body.classList.add('loaded');
         });
     </script>
     <%- include('header') %>
+    <section id="missions">
+        <div id="projects">
+            
+            <% getRepo.forEach(element => { %>
+                <div class="project" id="portfolio">
+                    <% if (element.Images !== undefined) { %>
+                        <img src="<%= element.Images %>" alt="portfolio_banner.png" class="img-project"/>
+                    <% } else{%>
+                        <img src="../img/vide.png" class="img-project"/>
+                    <% } %>
+                    <div class="content">
+                        <h2><%= element.Name %></h2>
+                        <p><%= element.Description %></p>
+                        <div class="tags">
+                            <% element.Language.forEach(tags => { %>
+                                <div class="tag">
+                                    <% if (tags === "CSS") { %>
+                                        <i class="devicon-css3-plain"></i> <%= tags %>
+                                    <% } else if (tags === "Hack") { %>
 
-    <% getRepo.forEach(element => { %>
-        <div class="content">
-            <h2><%= element.Name %></h2>
-            <p><%= element.Description %></p>
-
-            <% element.Langage.forEach(tags => { %>
-                <div class="tags">
-                    <div class="tag">
-                        <i class="devicon-<%= tags %>-plain"></i> <%= tags %>
-                    </div>
+                                    <% } else { %>
+                                        <i class="devicon-<%= tags.toLowerCase() %>-plain"></i> <%= tags %>
+                                    <% } %> 
+                                </div>
+                            <% }) %> 
+                        </div>
+                        <div class="buttons">
+                            <button class="secondary-button" onclick="window.open('<%= element.Html_URL %>', '_blank')">Voir sur Github <img src="../img/redirect.svg" alt="Redirect to Github" /></button>
+                        </div>
+                    </div> <!-- Fin du bloc de contenu -->
                 </div>
-            <% }) %> <!-- Fin de la boucle Langage.forEach -->
-
-            <div class="buttons">
-                <button class="secondary-button" onclick="window.open('<%= element.html_url %>', '_blank')">Voir sur Github</button>
-            </div>
-        </div> <!-- Fin du bloc de contenu -->
-    <% }); %> <!-- Fin de la boucle getRepo.forEach -->
+            <% }); %> <!-- Fin de la boucle getRepo.forEach -->
+            
+        </div>
+    </section>
 </body>
 </html>

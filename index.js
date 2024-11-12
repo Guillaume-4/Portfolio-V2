@@ -30,37 +30,45 @@ app.get("/EcoleEtEntreprise", (req, res) => {
 
 app.get("/missions", async (req, res) => {
   try {
-    // Étape 1 : Récupérer les dépôts GitHub
-    let response = await fetch("https://api.github.com/users/Guillaume-4/repos");
+    let response = await fetch("https://api.github.com/users/Guillaume-4/repos", {
+      headers: {
+        Authorization: 'token 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'
+      }
+    });
     
-    // Vérifiez si la requête est réussie
-    if (!response.ok) {
-      throw new Error(`Erreur lors de la requête : ${response.statusText}`);
-    }
-    
-    // Étape 2 : Convertir la réponse en JSON
     let getRepo = await response.json();
 
-    // Étape 3 : Vérifiez que getRepo est bien un tableau
-    console.log("Type de getRepo :", typeof getRepo); // Devrait être "object" pour un tableau JSON
-    console.log("Contenu de getRepo :", getRepo); // Affichez le contenu brut pour le diagnostic
+    console.log("Type de getRepo :", typeof getRepo); 
+    console.log("Contenu de getRepo :", getRepo); 
 
     if (!Array.isArray(getRepo)) {
       throw new Error("Les données reçues de GitHub ne sont pas un tableau comme attendu.");
     }
 
-    // Étape 4 : Utiliser .map() pour traiter les éléments
     getRepo = await Promise.all(
       getRepo.map(async (element) => {
-        // Faites la requête pour les langages utilisés dans chaque repo
-        let languageResponse = await fetch(element.languages_url);
-        
-        if (!languageResponse.ok) {
-          throw new Error(`Erreur lors de la récupération des langages : ${languageResponse.statusText}`);
-        }
+        let languageResponse = await fetch(element.languages_url, {
+          headers: {
+            Authorization: 'token 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'
+          }
+        });
+        let fetchimage = await fetch(`${element.url}/contents/portfolio_banner.png`,{
+          headers: {
+            Authorization: 'token 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'
+          }
+        });
 
+        if(fetchimage.status === 404){
+          var imageUrl = undefined
+        }
+        else{
+          let images = await fetchimage.json()
+          var imageUrl = `data:${images.content_type};base64,${images.content}`
+        }
         let languages = await languageResponse.json();
         
+        
+        console.log(`${element.url}/contents/portfolio_banner.png`)
         return {
           Name: element.name,
           CreateDate: element.created_at.slice(0, -10),
@@ -70,6 +78,7 @@ app.get("/missions", async (req, res) => {
             ? element.description
             : "Ce Repo n'a pas de description",
           Language: Object.keys(languages),
+          Images: imageUrl,
         };
       })
     );

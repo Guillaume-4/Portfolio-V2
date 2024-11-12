@@ -1,0 +1,9 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Carrés et rectangles aléatoires -->
+  <rect x="10" y="10" width="40" height="40" stroke="gray" stroke-width="2" fill="none"/>
+  <rect x="60" y="20" width="80" height="40" stroke="gray" stroke-width="2" fill="none"/>
+  <rect x="30" y="70" width="50" height="50" stroke="gray" stroke-width="2" fill="none"/>
+  <rect x="120" y="100" width="60" height="20" stroke="gray" stroke-width="2" fill="none"/>
+  <rect x="80" y="130" width="40" height="60" stroke="gray" stroke-width="2" fill="none"/>
+  <rect x="140" y="20" width="40" height="80" stroke="gray" stroke-width="2" fill="none"/>
+</svg>
