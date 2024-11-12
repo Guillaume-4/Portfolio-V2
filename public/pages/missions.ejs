@@ -4,51 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../js/changeroot.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Portfolio: Missions</title>
 </head>
 <body>
     <script>
         window.addEventListener('load', function() {
-                document.body.classList.add('loaded');
-            });
+            document.body.classList.add('loaded');
+        });
     </script>
     <%- include('header') %>
 
-    <div class="project" id="tools-project">
-        <img src="../assets/tools-project.png" alt="Tools Project" />
-
+    <% getRepo.forEach(element => { %>
         <div class="content">
-          <h2>
-            TOOLS PROJECT
-            <span class="code commentary small-text"
-              >// Projet Personnel</span
-            >
-          </h2>
+            <h2><%= element.Name %></h2>
+            <p><%= element.Description %></p>
 
-          <p>
-            Création d'un bot discord multi-tâches. Fonctionnalités amusantes,
-            de modération, de culture, etc.
-          </p>
+            <% element.Langage.forEach(tags => { %>
+                <div class="tags">
+                    <div class="tag">
+                        <i class="devicon-<%= tags %>-plain"></i> <%= tags %>
+                    </div>
+                </div>
+            <% }) %> <!-- Fin de la boucle Langage.forEach -->
 
-          <div class="tags">
-            <div class="tag"><i class="devicon-nodejs-plain"></i> NodeJS</div>
-            <div class="tag">
-              <i class="devicon-discordjs-plain"></i> DiscordJS
+            <div class="buttons">
+                <button class="secondary-button" onclick="window.open('<%= element.html_url %>', '_blank')">Voir sur Github</button>
             </div>
-            <div class="tag">
-              <i class="devicon-mongodb-plain"></i> MongoDB
-            </div>
-          </div>
-
-          <div class="buttons">
-            <button
-              class="secondary-button"
-              onclick="window.open('https://github.com/semanavasco/tools-project-main','_blank')">
-              Voir sur Github
-              <img src="../assets/redirect.svg" alt="Redirect to Github" />
-            </button>
-          </div>
-        </div>
-      </div>
+        </div> <!-- Fin du bloc de contenu -->
+    <% }); %> <!-- Fin de la boucle getRepo.forEach -->
 </body>
 </html>
