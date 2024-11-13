@@ -1,105 +1,91 @@
-body{
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
-
-body.loaded{
-    opacity: 1;
-}
-
 .Container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 600px;
-    width: 99%;
+    width: 100%;
+    height: 70vh;
 }
 
-.formulaire{
-    display: block;
-    width: 25%;
-    height: 400px;
+.DivContainer{
+    align-items: center;
+    width: 50%;
+}
+
+img{
+    width: 10%;
+    height: 10%;
+    transform: translateY(15px);
+}
+
+#TextMail{
+    color: white;
+    align-items: center;
     text-align: center;
     justify-content: center;
-    color: white;
     align-content: center;
-    columns: 1em;
-    margin-left: 20px;
+}
+
+
+#FormMail{
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 form{
-    margin-top: -100px;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+}
+
+.InputForm{
+    background-color: orange;
+    border-color: black;
+    color: black;
+    text-align: center;
+    margin-bottom: 5px;
+    width: 50%;
+    transition: background-color 0.5s ease-in, color 0.5s ease-in;
+    border-radius: 10px;
+    height: 3vh;
+    border-width: 5px;
+    border-style:solid ;
+}
+
+.InputForm::placeholder{
+    color: black;
     text-align: center;
 }
 
-input{
-    margin-bottom: 10px;
-    border-radius: 20px;
-    color: #fff;
-    background-color: rgb(255, 157, 0); 
-    border: 2px solid rgb(255, 157, 0);
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: center;
-    cursor: text;
-}
-
-
-input:focus {
+.InputForm:focus{
+    transition: background-color 0.5s ease-in, color 0.5s ease-in;
     background-color: transparent;
-    color: rgb(255, 157, 0);
-    outline: none;
+    border-color: orange;
+    color: orange;
 }
 
-input::placeholder{
-    color: rgba(255, 255, 255, 0.549);
+.InputForm:focus::placeholder{
+    color: orange;
 }
 
-#form-message{
-    transform: translateX(-13%);
+#MessageForm{
+    height: 10vh;
+    text-align: left;
 }
 
-button{
-    margin: 30px;
-    padding: 10px 25px;
-    color: #fff;
-    background-color: rgb(255, 157, 0); 
-    border: 2px solid rgb(255, 157, 0);
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: center;
+.ButtonMail{
+    width: 50%;
+    color: black;
+    background-color: orange;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    transition: background-color 0.5s ease-in, color 0.5s ease-in;
     cursor: pointer;
 }
 
-button:hover {
+.ButtonMail:hover{
     background-color: transparent;
-    color: rgb(255, 157, 0);
-  }
-
-button:focus {
-    outline: none;
-}
-
-
-.MailContainer{
-    display: flex;
-    width: 20%;
-    height: 100px;
-    text-align: center;
-    justify-content: center;
-    color: white;
-    align-content: center;
-    gap: 10px;
-}
-
-#icon-mail{
-    transform: translateY(-10%);
+    border-color: orange;
+    color: orange;
+    transition: background-color 0.5s ease-in, color 0.5s ease-in;
 }

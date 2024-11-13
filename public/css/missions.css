@@ -71,14 +71,12 @@ section#missions {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    font-size: 30px;
   }
   
   .tag {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 30px;
     margin: 0;
     gap: 0.2rem;
     color: white;

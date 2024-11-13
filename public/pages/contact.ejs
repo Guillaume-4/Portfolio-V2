@@ -18,36 +18,21 @@
     <%- include('header') %>
 
     <div class="Container">
-        <div class="MailContainer">
-            <i class="fa fa-envelope" style="font-size:36px" id="icon-mail"></i>
-            <p class="Mail">guillaume.blas4@gmail.com</p>
+        <div class="DivContainer" id="TextMail">
+            <h1>guillaume.blas4@gmail.com <img src="../img/mail.svg"></img></h1>
         </div>
-        <div class="formulaire">
-            <form action="">
-            <input type="text" placeholder="Nom Complet">
-            <input type="email" placeholder="E-mail">
-            <input type="text" placeholder="Objet">
-            <input type="text" placeholder="Message" id="form-message">
-            <a href=""><button onclick="sendEmail()">Envoyer </button></a>
-            <script>
-                function sendEmail() {
-                    Email.send({
-                        Host: "sandbox.smtp.mailtrap.io",
-                        Username: "ee5bae028805a6",
-                        Password: "29344fe99608de",
-                        To: 'guillaume.blas4@gmail.com',
-                        From: "hi@demomailtrap.com",
-                        Subject: "Email de Test",
-                        Body: "Ceci est un email de test envoyé en utilisant SMTP.js"
-                    })
-                    .then(function (message) {
-                        alert("Email envoyé avec succès") // Message d'alerte en cas de succès de l'envoi de l'email
-                    });
-                }
-            </script>
+
+        <div class="DivContainer" id="FormMail">
+            <form action="https://api.web3forms.com/submit" method="post" class="MailForm">
+                <input type="hidden" name="access_key" value="ca434a61-66c5-4934-87c6-64f474723cb5">
+                <input type="text" name="name" placeholder="Nom Complet" class="InputForm" required>
+                <input type="mail" name="email" placeholder="E-Mail" class="InputForm" required>
+                <input type="text" name="object" placeholder="Objet" class="InputForm" required>
+                <textarea type="text" name="message" placeholder="Message" id="MessageForm" class="InputForm" required></textarea>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <button type="submit" class="ButtonMail" class="InputForm">Envoyer</button>
             </form>
         </div>
-        
     </div>
 
 </body>
