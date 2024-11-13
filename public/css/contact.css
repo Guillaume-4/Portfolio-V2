@@ -13,6 +13,7 @@ img{
     width: 10%;
     height: 10%;
     transform: translateY(15px);
+    margin-bottom: 50px;
 }
 
 #TextMail{
@@ -38,7 +39,7 @@ form{
 }
 
 .InputForm{
-    background-color: orange;
+    background-color: white;
     border-color: black;
     color: black;
     text-align: center;
@@ -57,14 +58,14 @@ form{
 }
 
 .InputForm:focus{
-    transition: background-color 0.5s ease-in, color 0.5s ease-in;
+    transition: background-color 0.5s ease-out, color 0.5s ease-out;
     background-color: transparent;
-    border-color: orange;
-    color: orange;
+    border-color: rgb(255, 157, 0);
+    color: rgb(255, 157, 0);
 }
 
 .InputForm:focus::placeholder{
-    color: orange;
+    color: rgb(255, 157, 0);
 }
 
 #MessageForm{
@@ -75,17 +76,18 @@ form{
 .ButtonMail{
     width: 50%;
     color: black;
-    background-color: orange;
+    background-color: white;
     border-radius: 10px;
     border-width: 5px;
     border-style: solid;
-    transition: background-color 0.5s ease-in, color 0.5s ease-in;
+    transition: background-color 0.5s ease-in, color 0.5s ease-in, border-color 0.5s ease-in;
     cursor: pointer;
+    height: 30px;
 }
 
 .ButtonMail:hover{
     background-color: transparent;
-    border-color: orange;
-    color: orange;
-    transition: background-color 0.5s ease-in, color 0.5s ease-in;
+    border-color: rgb(255, 157, 0);
+    color: rgb(255, 157, 0);
+    transition: background-color 0.5s ease-out, color 0.5s ease-out, border-color 0.5s ease-out;
 }
