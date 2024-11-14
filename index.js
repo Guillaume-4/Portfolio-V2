@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
-const {SECRETKEY} = require("./config")
+const { SECRETKEY } = require("./config");
 
 app.set("views", path.join(__dirname + "/public/pages"));
 app.set("view engine", "ejs");
@@ -31,45 +31,47 @@ app.get("/EcoleEtEntreprise", (req, res) => {
 
 app.get("/missions", async (req, res) => {
   try {
-    let response = await fetch("https://api.github.com/users/Guillaume-4/repos", {
-      headers: {
-        Authorization: `token ${SECRETKEY}`
+    let response = await fetch(
+      "https://api.github.com/users/Guillaume-4/repos",
+      {
+        headers: {
+          Authorization: `token ${SECRETKEY}`,
+        },
       }
-    });
-    
+    );
+
     let getRepo = await response.json();
 
-    console.log("Type de getRepo :", typeof getRepo); 
-    console.log("Contenu de getRepo :", getRepo); 
-
     if (!Array.isArray(getRepo)) {
-      throw new Error("Les données reçues de GitHub ne sont pas un tableau comme attendu.");
+      throw new Error(
+        "Les données reçues de GitHub ne sont pas un tableau comme attendu."
+      );
     }
 
     getRepo = await Promise.all(
       getRepo.map(async (element) => {
         let languageResponse = await fetch(element.languages_url, {
           headers: {
-            Authorization: `token ${SECRETKEY}`
-          }
+            Authorization: `token ${SECRETKEY}`,
+          },
         });
-        let fetchimage = await fetch(`${element.url}/contents/portfolio_banner.png`,{
-          headers: {
-            Authorization: `token ${SECRETKEY}`
+        let fetchimage = await fetch(
+          `${element.url}/contents/portfolio_banner.png`,
+          {
+            headers: {
+              Authorization: `token ${SECRETKEY}`,
+            },
           }
-        });
+        );
 
-        if(fetchimage.status === 404){
-          var imageUrl = undefined
-        }
-        else{
-          let images = await fetchimage.json()
-          var imageUrl = `data:${images.content_type};base64,${images.content}`
+        if (fetchimage.status === 404) {
+          var imageUrl = undefined;
+        } else {
+          let images = await fetchimage.json();
+          var imageUrl = `data:${images.content_type};base64,${images.content}`;
         }
         let languages = await languageResponse.json();
-        
-        
-        console.log(`${element.url}/contents/portfolio_banner.png`)
+
         return {
           Name: element.name,
           CreateDate: element.created_at.slice(0, -10),
@@ -84,12 +86,7 @@ app.get("/missions", async (req, res) => {
       })
     );
 
-    // Étape 5 : Afficher les données traitées dans la console pour vérification
-    console.log("Contenu final de getRepo :", getRepo);
-
-    // Rendre la page avec les données
     res.render("missions", { getRepo });
-
   } catch (error) {
     console.error("Erreur lors de la récupération des missions :", error);
     res.status(500).send("Erreur lors de la récupération des missions");
