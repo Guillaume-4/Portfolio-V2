@@ -1,26 +1,51 @@
 <svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="300" height="100" stroke="gray" stroke-width="6" fill="none" transform="rotate(15 250 100)"/>
-  <rect x="500" y="200" width="150" height="300" stroke="gray" stroke-width="4" fill="none" transform="rotate(-20 575 350)"/>
-  <rect x="800" y="150" width="400" height="200" stroke="gray" stroke-width="2" fill="none" transform="rotate(30 1000 250)"/>
-  <rect x="1200" y="100" width="300" height="150" stroke="gray" stroke-width="7" fill="none" transform="rotate(-10 1350 175)"/>
-  <rect x="1600" y="50" width="250" height="200" stroke="gray" stroke-width="5" fill="none" transform="rotate(5 1725 150)"/>
-  <rect x="200" y="400" width="350" height="120" stroke="gray" stroke-width="3" fill="none" transform="rotate(-5 375 460)"/>
-  <rect x="700" y="500" width="200" height="300" stroke="gray" stroke-width="4" fill="none" transform="rotate(20 800 650)"/>
-  <rect x="1200" y="500" width="250" height="100" stroke="gray" stroke-width="6" fill="none" transform="rotate(-15 1325 550)"/>
-  <rect x="1600" y="400" width="300" height="200" stroke="gray" stroke-width="2" fill="none" transform="rotate(10 1750 500)"/>
-  <rect x="900" y="700" width="350" height="150" stroke="gray" stroke-width="5" fill="none" transform="rotate(-25 1075 775)"/>
-  <rect x="400" y="600" width="300" height="200" stroke="gray" stroke-width="3" fill="none" transform="rotate(15 550 700)"/>
-  <rect x="1500" y="750" width="200" height="150" stroke="gray" stroke-width="7" fill="none" transform="rotate(-5 1600 825)"/>
-  <rect x="1100" y="850" width="400" height="100" stroke="gray" stroke-width="2" fill="none" transform="rotate(30 1300 900)"/>
-  <rect x="50" y="700" width="250" height="250" stroke="gray" stroke-width="6" fill="none" transform="rotate(-20 175 825)"/>
-  <rect x="1300" y="200" width="150" height="300" stroke="gray" stroke-width="4" fill="none" transform="rotate(10 1375 350)"/>
-  <rect x="1700" y="600" width="250" height="120" stroke="gray" stroke-width="5" fill="none" transform="rotate(-15 1825 660)"/>
-  <rect x="200" y="900" width="350" height="100" stroke="gray" stroke-width="3" fill="none" transform="rotate(20 375 950)"/>
-  <rect x="600" y="800" width="200" height="300" stroke="gray" stroke-width="7" fill="none" transform="rotate(-10 700 950)"/>
-  <rect x="300" y="200" width="300" height="150" stroke="gray" stroke-width="4" fill="none" transform="rotate(25 450 275)"/>
-  <rect x="1400" y="850" width="250" height="200" stroke="gray" stroke-width="2" fill="none" transform="rotate(-5 1525 950)"/>
-  <rect x="1800" y="150" width="100" height="400" stroke="gray" stroke-width="6" fill="none" transform="rotate(15 1850 350)"/>
-  <rect x="50" y="50" width="250" height="120" stroke="gray" stroke-width="5" fill="none" transform="rotate(-10 175 110)"/>
-  <rect x="500" y="300" width="150" height="200" stroke="gray" stroke-width="3" fill="none" transform="rotate(20 575 400)"/>
-  <rect x="800" y="100" width="200" height="250" stroke="gray" stroke-width="4" fill="none" transform="rotate(-25 900 225)"/>
+  <!-- Styles pour l'animation -->
+  <style>
+    .animate-stroke {
+      fill: none;
+      stroke: gray;
+      stroke-width: var(--stroke-width, 4);
+      stroke-dasharray: var(--dash-array, 1000);
+      stroke-dashoffset: 1000; 
+      animation: drawUndraw 6s ease-in-out infinite; 
+    }
+
+    @keyframes drawUndraw {
+      0% {
+        stroke-dashoffset: 1000; /* Départ masqué */
+      }
+      50% {
+        stroke-dashoffset: 0; /* Dessiné complètement */
+      }
+      100% {
+        stroke-dashoffset: -1000; /* Complètement effacé */
+      }
+    }
+  </style>
+
+  <!-- Rectangles animés -->
+  <rect x="100" y="50" width="300" height="100" transform="rotate(15 250 100)" class="animate-stroke" style="--stroke-width: 6;" />
+  <rect x="500" y="200" width="150" height="300" transform="rotate(-20 575 350)" class="animate-stroke" style="--stroke-width: 4;" />
+  <rect x="800" y="150" width="400" height="200" transform="rotate(30 1000 250)" class="animate-stroke" style="--stroke-width: 2;" />
+  <rect x="1200" y="100" width="300" height="150" transform="rotate(-10 1350 175)" class="animate-stroke" style="--stroke-width: 7;" />
+  <rect x="1600" y="50" width="250" height="200" transform="rotate(5 1725 150)" class="animate-stroke" style="--stroke-width: 5;" />
+  <rect x="200" y="400" width="350" height="120" transform="rotate(-5 375 460)" class="animate-stroke" style="--stroke-width: 3;" />
+  <rect x="700" y="500" width="200" height="300" transform="rotate(20 800 650)" class="animate-stroke" style="--stroke-width: 4;" />
+  <rect x="1200" y="500" width="250" height="100" transform="rotate(-15 1325 550)" class="animate-stroke" style="--stroke-width: 6;" />
+  <rect x="1600" y="400" width="300" height="200" transform="rotate(10 1750 500)" class="animate-stroke" style="--stroke-width: 2;" />
+  <rect x="900" y="700" width="350" height="150" transform="rotate(-25 1075 775)" class="animate-stroke" style="--stroke-width: 5;" />
+  <rect x="400" y="600" width="300" height="200" transform="rotate(15 550 700)" class="animate-stroke" style="--stroke-width: 3;" />
+  <rect x="1500" y="750" width="200" height="150" transform="rotate(-5 1600 825)" class="animate-stroke" style="--stroke-width: 7;" />
+  <rect x="1100" y="850" width="400" height="100" transform="rotate(30 1300 900)" class="animate-stroke" style="--stroke-width: 2;" />
+  <rect x="50" y="700" width="250" height="250" transform="rotate(-20 175 825)" class="animate-stroke" style="--stroke-width: 6;" />
+  <rect x="1300" y="200" width="150" height="300" transform="rotate(10 1375 350)" class="animate-stroke" style="--stroke-width: 4;" />
+  <rect x="1700" y="600" width="250" height="120" transform="rotate(-15 1825 660)" class="animate-stroke" style="--stroke-width: 5;" />
+  <rect x="200" y="900" width="350" height="100" transform="rotate(20 375 950)" class="animate-stroke" style="--stroke-width: 3;" />
+  <rect x="600" y="800" width="200" height="300" transform="rotate(-10 700 950)" class="animate-stroke" style="--stroke-width: 7;" />
+  <rect x="300" y="200" width="300" height="150" transform="rotate(25 450 275)" class="animate-stroke" style="--stroke-width: 4;" />
+  <rect x="1400" y="850" width="250" height="200" transform="rotate(-5 1525 950)" class="animate-stroke" style="--stroke-width: 2;" />
+  <rect x="1800" y="150" width="100" height="400" transform="rotate(15 1850 350)" class="animate-stroke" style="--stroke-width: 6;" />
+  <rect x="50" y="50" width="250" height="120" transform="rotate(-10 175 110)" class="animate-stroke" style="--stroke-width: 5;" />
+  <rect x="500" y="300" width="150" height="200" transform="rotate(20 575 400)" class="animate-stroke" style="--stroke-width: 3;" />
+  <rect x="800" y="100" width="200" height="250" transform="rotate(-25 900 225)" class="animate-stroke" style="--stroke-width: 4;" />
 </svg>
