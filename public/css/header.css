@@ -91,3 +91,39 @@ body::before {
 cursor{
     cursor: unset;
 }
+
+/* NOEL */
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Empêche les clics d'interagir avec les flocons */
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    user-select: none;
+    opacity: 0.8;
+    animation: fallAndSpin linear infinite;
+  }
+  
+.snowflake {
+    animation-duration: 5s, 3s; /* Chute: 5s, Rotation: 3s */
+  }
+
+  @keyframes fallAndSpin {
+    0% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
