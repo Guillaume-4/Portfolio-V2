@@ -16,4 +16,4 @@ function createSnowflake() {
   }, 8000);
 }
 
-setInterval(createSnowflake, 50);
+//setInterval(createSnowflake, 50);

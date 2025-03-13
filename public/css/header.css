@@ -21,7 +21,6 @@ header{
     background-color: #000000b6;
     top: 0;
     left: 0;
-    height: 100px;
     width: 100%;
     color: white;
     border-bottom: rgb(255, 157, 0) solid 2px;
@@ -92,6 +91,19 @@ cursor{
     cursor: unset;
 }
 
+.burger-menu{
+    display: none;
+}
+
+.burger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.3s;
+  }
+
 /* NOEL */
 
 #snow {
@@ -127,3 +139,23 @@ cursor{
       transform: translateY(100vh) rotate(360deg);
     }
   }
+
+@media screen and (max-width: 1200px) {
+    .burger-menu{
+      display: flex;
+    }
+    .div-header > ul > li{
+      display: none;
+      margin: 10px;
+    }
+
+    .div-header ul{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    
+    .li-header.selected{
+      display: block;
+    }
+}

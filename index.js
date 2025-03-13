@@ -10,23 +10,19 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname + "/public")));
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {selected: "accueil"});
 });
 
 app.get("/apropos", (req, res) => {
-  res.render("apropos");
-});
-
-app.get("/contact", (req, res) => {
-  res.render("contact");
+  res.render("apropos", {selected: "apropos"});
 });
 
 app.get("/btssio", (req, res) => {
-  res.render("btssio");
+  res.render("btssio", {selected: "btssio"});
 });
 
 app.get("/EcoleEtEntreprise", (req, res) => {
-  res.render("eee");
+  res.render("eee", {selected: "EcoleEtEntreprise"});
 });
 
 app.get("/missions", async (req, res) => {
@@ -86,7 +82,7 @@ app.get("/missions", async (req, res) => {
       })
     );
 
-    res.render("missions", { getRepo });
+    res.render("missions", { getRepo, selected: "missions" });
   } catch (error) {
     console.error("Erreur lors de la récupération des missions :", error);
     res.status(500).send("Erreur lors de la récupération des missions");
@@ -94,15 +90,15 @@ app.get("/missions", async (req, res) => {
 });
 
 app.get("/projets", (req, res) => {
-  res.render("projets");
+  res.render("projets", {selected: "projets"});
 });
 
 app.get("/veilletechnologique", (req, res) => {
-  res.render("veilletechnologique");
+  res.render("veilletechnologique", {selected: "veilletechnologique"});
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact");
+  res.render("contact", {selected: "contact"});
 });
 
 app.listen(port, () => {
