@@ -136,6 +136,15 @@ i{
     gap: 40px;
 }
 
+@media screen and (max-width: 1200px){
+    .Liste{
+        width: 75%;
+        height: 25%;
+        transform: translate(15%,100%);
+    }
+    
+}
+
 .close{
     position: absolute;
     top: 20px;  
