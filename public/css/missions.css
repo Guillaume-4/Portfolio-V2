@@ -86,6 +86,8 @@ section#missions {
     transition: color 0.2s ease-in, transform 0.2s ease-in;
   }
   
+
+
   .tag:hover {
     transform: scale(1.1);
     color: rgb(255, 157, 0);
@@ -146,5 +148,9 @@ section#missions {
   @media screen and (max-width: 500px) {
     .buttons {
       flex-direction: column;
+      width: 80%;
+    }
+    #projects{
+      width: 80%;
     }
   }

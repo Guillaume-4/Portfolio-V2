@@ -32,13 +32,13 @@ body::before {
     position: relative;
     color: white;
     margin-top: 10%;
-    font-size: 3em;
+    font-size: 5vw;
     font-weight: bold;
 }
 
 .Infos #welcome-message{
     color: white;
-    font-size: 2em;
+    font-size: 3vw;
     margin-top: 1%;
     font-style: italic;
 }
@@ -55,7 +55,7 @@ h1 {
 
 #address{
     color: white;
-    font-size: 1.4em;
+    font-size: 2vw;
     margin-top: 5px;
 }
 
@@ -77,7 +77,7 @@ h1 {
     border: 2px solid rgb(255, 157, 0);
     border-radius: 30px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 2vw;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
     text-align: center;

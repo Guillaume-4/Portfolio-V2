@@ -130,3 +130,76 @@ i{
   height: 90%;
   transform: translateX(10px);
 }
+
+@media screen and (max-width: 1200px) {
+  #boxContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  #Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .box{
+    border: rgb(255, 157, 0) solid 2px;
+    border-radius: 25px;
+    height: 320px;
+    width: 180px;
+    text-align: center;
+    color: white;
+  }
+
+  #TextContainer{
+    width: 70%;
+    height: 360px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    align-content: center;
+  }
+
+  #TextAbout{
+    font-size: 1.2em;
+  }
+
+  #Container{
+    display: flex;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .TitleBox{
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  i{
+    position: relative;
+    top: 20px;
+    font-size: 4.2em;
+  }
+
+  .BoxIcon{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-top: rgb(255, 157, 0) solid 2px;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    transform: translateX(10px);
+  }
+  
+}

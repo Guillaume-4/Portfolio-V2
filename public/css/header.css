@@ -141,21 +141,47 @@ cursor{
   }
 
 @media screen and (max-width: 1200px) {
-    .burger-menu{
-      display: flex;
-    }
-    .div-header > ul > li{
-      display: none;
-      margin: 10px;
-    }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 5px;
+    border: 5px, solid, rgb(255, 157, 0);
+    filter: drop-shadow(10px 10px 4px rgb(255, 157, 0));
+    height: 50px;
+    width: 50px;
+    align-items: center;
+  }
 
-    .div-header ul{
-      display: flex;
-      flex-direction: column;
-      
-    }
-    
-    .li-header.selected{
-      display: block;
-    }
+  .burger-line {
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    transition: 0.3s ease-in;
+  }
+
+  .burger-menu:hover .burger-line {
+    background-color: rgb(255, 157, 0);
+  }
+
+  .div-header > ul > li {
+    display: none;
+    margin: 10px;
+  }
+
+  .div-header ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .li-header.selected {
+    display: block;
+  }
+
+  header{
+    min-height: 12vh;
+  }
 }

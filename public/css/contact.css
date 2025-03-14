@@ -95,3 +95,52 @@ form{
 textarea{
     resize: none;
 }
+
+@media screen and (max-width: 1200px){
+    .Container{
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .DivContainer{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .DivContainer > form{
+        width: 70%;
+        align-items: center;
+    }
+
+    img{
+        width: 20%;
+        height: 20%;
+    }
+
+    #TextMail{
+        font-size: 2vw;
+    }
+
+    #FormMail{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .InputForm{
+        width: 80%;
+    }
+
+    #MessageForm{
+        height: 20vh;
+    }
+
+    .ButtonMail{
+        width: 81%;
+    }
+    
+}

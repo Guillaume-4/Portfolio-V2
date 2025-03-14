@@ -34,6 +34,40 @@ body.loaded{
     width: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+    .Container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        width: 80%;
+        margin-top: 50px;
+
+    }
+
+    .TextContainer{
+        width: 70%;
+        height: 360px;
+        text-align: center;
+        justify-content: center;
+        color: white;
+        align-content: center;
+    }
+
+    .Text{
+        font-size: 1.2em;
+    }
+
+    .TitleBox{
+        display: flex;
+        height: 10%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
 .SLAM{
     width: 40%;
     margin-left: 5%;
