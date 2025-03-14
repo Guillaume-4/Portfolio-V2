@@ -164,6 +164,8 @@ i{
     justify-content: center;
     color: white;
     align-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   #TextAbout{
