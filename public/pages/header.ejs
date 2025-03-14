@@ -4,7 +4,7 @@
 
 <header>
     <div class="div-header">
-        <ul>
+        <ul id="nav">
             <li class="li-header <% if (selected === "accueil") { %>selected<% } %>" id="nav-home" onclick="ChangeRoot('/')">Accueil</li>
             <li class="li-header <% if (selected === "apropos") { %>selected<% } %>" id="nav-about" onclick="ChangeRoot('apropos')">A Propos</li>
             <li class="li-header <% if (selected === "btssio") { %>selected<% } %>" id="nav-btssio" onclick="ChangeRoot('btssio')">BTS-SIO</li>
@@ -14,7 +14,7 @@
             <li class="li-header <% if (selected === "veilletechnologique") { %>selected<% } %>" id="nav-veilleTechno" onclick="ChangeRoot('veilletechnologique')">Veille Technologique</li>
             <li class="li-header <% if (selected === "contact") { %>selected<% } %>" id="nav-contact" onclick="ChangeRoot('contact')">Me Contacter</li>
         </ul>
-        <button class="burger-menu" onclick="toggleMenu()">
+        <button class="burger-menu" id="burger-menu" onclick="toggleMenu()">
             <span class="burger-line"></span>
             <span class="burger-line"></span>
             <span class="burger-line"></span>

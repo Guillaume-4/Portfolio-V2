@@ -181,6 +181,10 @@ cursor{
     display: block;
   }
 
+  .li-header.active{
+    display: block;
+  }
+
   header{
     min-height: 12vh;
   }
