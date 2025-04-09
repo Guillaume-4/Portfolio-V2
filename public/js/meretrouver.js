@@ -16,3 +16,11 @@ function downloadCV(){
     link.download = 'CV-BLAS Guillaume.pdf'; 
     link.click();
 }
+
+
+function downloadVeille(){
+    const link = document.createElement('a');
+    link.href = '../../pdf/veille_technologique_bts.docx'; 
+    link.download = 'veille_technologique_bts.docx'; 
+    link.click();
+}
