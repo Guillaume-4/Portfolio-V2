@@ -6,6 +6,7 @@
     <link rel="icon" type="image/vnd.icon" href="../../img/icon.ico">
     <script src="../../js/changeroot.js" defer></script>
     <link rel="stylesheet" href="../../css/projets.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Portfolio: Projets</title>
 </head>
 <body>
@@ -17,10 +18,47 @@
     <%- include('header') %>
     <div class="Projets">
         <div class="ClientLeger">
-            <h1>Client Léger</h1>
+            <div class="ClientL">
+                <img src="../../img/MWC.png" alt="" srcset="../../img/MWC.png" class="logo"><h1>My Watching Companion</h1>
+            </div>
+            <div class="desc">
+                <p>My Watching Companion est une plateforme web permettant de gérer
+                    les films et séries. Elle offre de puissantes fonctionnalités,
+                    allant de la création de listes personnalisées à leur partage avec
+                    nos amis !</p>
+                    <div class="tags">
+                        <div class="tag"><i class="devicon-nodejs-plain"></i> NodeJS</div>
+                        <div class="tag">
+                          <i class="devicon-javascript-plain"></i> JavaScript
+                        </div>
+                        <div class="tag">
+                          <i class="devicon-express-original"></i> Express
+                        </div>
+                        <div class="tag">
+                          <i class="devicon-microsoftsqlserver-plain"></i> SQLServer
+                        </div>
+                      </div>
+                
+            </div>
+            
+            
         </div>
         <div class="ClientLourd">
-            <h1>Client Lourd</h1>
+            <h1>GestStockJava</h1>
+
+            <p class="desc">
+                Gest Stock est une application de bureau permettant aux
+                entreprises de gérer leur stock sans complexité. Gest Stock permet
+                de gérer : les fournisseurs, les produits, les catégories, les
+                ventes et les utilisateurs.
+              </p>
+  
+              <div class="tags">
+                <div class="tag"><i class="devicon-java-plain"></i> Java</div>
+                <div class="tag">
+                  <i class="devicon-microsoftsqlserver-plain"></i> SQLServer
+                </div>
+              </div>
         </div>
     </div>
 </body>

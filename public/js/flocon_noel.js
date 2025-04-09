@@ -16,4 +16,5 @@ function createSnowflake() {
   }, 8000);
 }
 
+// Générer des flocons régulièrement
 //setInterval(createSnowflake, 50);
