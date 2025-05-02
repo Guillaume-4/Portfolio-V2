@@ -45,7 +45,7 @@ app.get("/missions", async (req, res) => {
     }
 
     getRepo = await Promise.all(
-      getRepo.map(async (element) => {
+      getRepo.filter(repo => repo.name !== "GestStockJava").map(async (element) => {
         let languageResponse = await fetch(element.languages_url, {
           headers: {
             Authorization: `token ${SECRETKEY}`,

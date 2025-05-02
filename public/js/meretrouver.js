@@ -24,3 +24,10 @@ function downloadVeille(){
     link.download = 'veille_technologique_bts.docx'; 
     link.click();
 }
+
+function downloadDocsLeger(){
+    const link = document.createElement('a');
+    link.href = '../../pdf/Documentation_MyWatchingCompanion.docx'; 
+    link.download = 'Documentation_MyWatchingCompanion.docx'; 
+    link.click();
+}
