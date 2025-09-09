@@ -1,5 +1,5 @@
 Hello world ! 
 
-My second version of my portfolio
+You are on my portfolio
 
 You can see it on : https://guillaumeblas.dev
