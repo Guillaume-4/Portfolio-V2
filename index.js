@@ -4,103 +4,67 @@ const app = express();
 const port = process.env.PORT || 3000;
 const { SECRETKEY } = require("./config");
 
-app.set("views", path.join(__dirname + "/public/pages"));
+app.set("views", path.join(__dirname, "/public/pages"));
 app.set("view engine", "ejs");
 
-app.use(express.static(path.join(__dirname + "/public")));
+app.use(express.static(path.join(__dirname, "/public")));
 
-app.get("/", (req, res) => {
-  res.render("index", {selected: "accueil"});
-});
-
-app.get("/apropos", (req, res) => {
-  res.render("apropos", {selected: "apropos"});
-});
-
-app.get("/btssio", (req, res) => {
-  res.render("btssio", {selected: "btssio"});
-});
-
-app.get("/EcoleEtEntreprise", (req, res) => {
-  res.render("eee", {selected: "EcoleEtEntreprise"});
-});
-
-app.get("/missions", async (req, res) => {
+// Route principale - Portfolio one-page
+app.get("/", async (req, res) => {
   try {
-    let response = await fetch(
-      "https://api.github.com/users/Guillaume-4/repos",
-      {
-        headers: {
-          Authorization: `token ${SECRETKEY}`,
-        },
-      }
-    );
+    // Récupération des repos GitHub
+    const response = await fetch("https://api.github.com/users/Guillaume-4/repos", {
+      headers: {
+        Authorization: `token ${SECRETKEY}`,
+      },
+    });
 
-    let getRepo = await response.json();
+    let repos = await response.json();
 
-    if (!Array.isArray(getRepo)) {
-      throw new Error(
-        "Les données reçues de GitHub ne sont pas un tableau comme attendu."
-      );
+    if (!Array.isArray(repos)) {
+      repos = [];
     }
 
-    getRepo = await Promise.all(
-      getRepo.filter(repo => repo.name !== "GestStockJava").map(async (element) => {
-        let languageResponse = await fetch(element.languages_url, {
-          headers: {
-            Authorization: `token ${SECRETKEY}`,
-          },
-        });
-        let fetchimage = await fetch(
-          `${element.url}/contents/portfolio_banner.png`,
-          {
-            headers: {
-              Authorization: `token ${SECRETKEY}`,
-            },
+    // Filtrer et enrichir les repos
+    const projects = await Promise.all(
+      repos
+        .filter((repo) => repo.name !== "GestStockJava" && repo.name !== "Guillaume-4")
+        .map(async (repo) => {
+          // Récupérer les langages
+          const langResponse = await fetch(repo.languages_url, {
+            headers: { Authorization: `token ${SECRETKEY}` },
+          });
+          const languages = await langResponse.json();
+
+          // Récupérer l'image banner si elle existe
+          const imgResponse = await fetch(`${repo.url}/contents/portfolio_banner.png`, {
+            headers: { Authorization: `token ${SECRETKEY}` },
+          });
+
+          let imageUrl = null;
+          if (imgResponse.status !== 404) {
+            const imgData = await imgResponse.json();
+            imageUrl = `data:${imgData.content_type};base64,${imgData.content}`;
           }
-        );
 
-        if (fetchimage.status === 404) {
-          var imageUrl = undefined;
-        } else {
-          let images = await fetchimage.json();
-          var imageUrl = `data:${images.content_type};base64,${images.content}`;
-        }
-        let languages = await languageResponse.json();
-
-        return {
-          Name: element.name,
-          CreateDate: element.created_at.slice(0, -10),
-          UpdateDate: element.updated_at.slice(0, -10),
-          Html_URL: element.html_url,
-          Description: element.description
-            ? element.description
-            : "Ce Repo n'a pas de description",
-          Language: Object.keys(languages),
-          Images: imageUrl,
-        };
-      })
+          return {
+            name: repo.name,
+            description: repo.description || "Pas de description disponible",
+            url: repo.html_url,
+            languages: Object.keys(languages),
+            image: imageUrl,
+            createdAt: new Date(repo.created_at).getFullYear(),
+          };
+        })
     );
 
-    res.render("missions", { getRepo, selected: "missions" });
+    res.render("index", { projects });
   } catch (error) {
-    console.error("Erreur lors de la récupération des missions :", error);
-    res.status(500).send("Erreur lors de la récupération des missions");
+    console.error("Erreur:", error);
+    res.render("index", { projects: [] });
   }
 });
 
-app.get("/projets", (req, res) => {
-  res.render("projets", {selected: "projets"});
-});
-
-app.get("/veilletechnologique", (req, res) => {
-  res.render("veilletechnologique", {selected: "veilletechnologique"});
-});
-
-app.get("/contact", (req, res) => {
-  res.render("contact", {selected: "contact"});
-});
-
 app.listen(port, () => {
-  console.log(`Listening on port : ${port}`);
+  console.log(`Portfolio en ligne sur http://localhost:${port}`);
 });

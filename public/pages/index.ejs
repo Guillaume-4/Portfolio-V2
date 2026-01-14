@@ -1,40 +1,279 @@
-<!DOCTYPE lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/changeroot.js" defer></script>
-    <script src="/js/meretrouver.js" defer></script>
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="../css/indes.css">
-    <link rel="icon" type="image/vnd.icon" href="../../img/icon.ico">
-
-    <title>Portfolio: Accueil</title>
+    <meta name="description" content="Portfolio de Guillaume BLAS - Développeur Full Stack">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/icon.ico">
+    <title>Guillaume BLAS | Développeur</title>
 </head>
-<div id="MeRetrouver">
-    <div class="liste">
-        <button class="close" id="BoutonClose">X</button>
-        <a href="https://github.com/guillaume-4" target="_blank"><i class="devicon-github-original-wordmark"></i></a>
-        <a href="https://www.linkedin.com/in/guillaume-blas/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
-    </div>
-</div>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">GB</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#carriere">Carrière</a></li>
+            <li><a href="#entreprises">Entreprises</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+        </ul>
+        <button class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Guillaume <span class="highlight">BLAS</span></h1>
+                <p class="subtitle">Apprenti Data Scientist</p>
+                <p class="location">📍 Le Chesnay, France</p>
+                <p class="description">Passionné par le développement de la data et logiciel.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Guillaume-4" target="_blank" rel="noopener" title="GitHub">
+                        <i class="devicon-github-original"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/guillaume-blas/" target="_blank" rel="noopener" title="LinkedIn">
+                        <i class="devicon-linkedin-plain"></i>
+                    </a>
+                    <a href="mailto:contact@guillaume-blas.fr" title="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <a href="/pdf/CV_Guillaume_BLAS.pdf" download class="btn btn-primary">
+                    Télécharger mon CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrière Section -->
+    <section id="carriere" class="section">
+        <div class="container">
+            <h2 class="section-title">Mon <span class="highlight">Parcours</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">🎓</div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025 - 2026</span>
+                        <h3>Bachelor Informatique et Cybersécurité</h3>
+                        <p class="timeline-place">ESILV - La Défense</p>
+                        <p>Formation de spécialisation dans la Data et l'IA.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🎓</div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - 2025</span>
+                        <h3>BTS SIO - Option SLAM</h3>
+                        <p class="timeline-place">Ensitech - Saint-Quentin-en-Yvelines</p>
+                        <p>Services Informatiques aux Organisations, spécialité Solutions Logicielles et Applications Métier.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🎓</div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 - 2023</span>
+                        <h3>Baccalauréat Général</h3>
+                        <p class="timeline-place">Lycée - Saint-Quentin-en-Yvelines</p>
+                        <p>Spécialités Mathématiques et Numérique et Sciences Informatiques (NSI).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entreprises Section -->
+    <section id="entreprises" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Mes <span class="highlight">Expériences</span></h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                            <img src="https://media.licdn.com/dms/image/v2/C4D0BAQHkWUnikErIXA/company-logo_200_200/company-logo_200_200/0/1647871643412/sabsystem_logo?e=2147483647&v=beta&t=Z-DxjXvIiW5KVw8ovyy1lEijEpmCCkfL6dIZEp_gjnM" alt="Société Générale" class="company-logo">
+                            <div>
+                                <h3>SabSystem</h3>
+                                <span class="experience-date">Oct. 2025 - Présent</span>
+                            </div>
+                        </div>
+                        <p class="experience-role">Développeur en Alternance</p>
+                        <p class="experience-desc">Caca.</p>
+                        <div class="experience-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Typescript</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Git</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <img src="/img/SG.png" alt="Société Générale" class="company-logo">
+                        <div>
+                            <h3>Société Générale</h3>
+                            <span class="experience-date">Sept. 2023 - Août 2025</span>
+                        </div>
+                    </div>
+                    <p class="experience-role">Développeur Logiciel en Alternance</p>
+                    <p class="experience-desc">Développement d'applications internes, gestion de projets en environnement international, intégration de solutions logicielles.</p>
+                    <div class="experience-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2 class="section-title">Mes <span class="highlight">Projets</span></h2>
+            <div class="projects-grid">
+                <% if (projects && projects.length > 0) { %>
+                    <% projects.forEach(project => { %>
+                        <div class="project-card">
+                            <% if (project.image) { %>
+                                <img src="<%= project.image %>" alt="<%= project.name %>" class="project-image">
+                            <% } else { %>
+                                <div class="project-image-placeholder">
+                                    <i class="devicon-github-original"></i>
+                                </div>
+                            <% } %>
+                            <div class="project-content">
+                                <h3><%= project.name %></h3>
+                                <p><%= project.description %></p>
+                                <div class="project-tags">
+                                    <% project.languages.forEach(lang => { %>
+                                        <% if (lang !== "Hack") { %>
+                                            <span class="tag">
+                                                <% if (lang === "CSS") { %>
+                                                    <i class="devicon-css3-plain"></i>
+                                                <% } else { %>
+                                                    <i class="devicon-<%= lang.toLowerCase() %>-plain"></i>
+                                                <% } %>
+                                                <%= lang %>
+                                            </span>
+                                        <% } %>
+                                    <% }); %>
+                                </div>
+                                <a href="<%= project.url %>" target="_blank" rel="noopener" class="btn btn-secondary">
+                                    Voir sur GitHub
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <p class="no-projects">Chargement des projets...</p>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Mes <span class="highlight">Certifications</span></h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon"><img src="https://media.licdn.com/dms/image/v2/D4E0BAQFqdm1TZ-RZKQ/company-logo_100_100/B4EZgOay6gHEAY-/0/1752588562343/amazon_web_services_logo?e=1770249600&v=beta&t=-F_a7r8UZ00Gnx2DtOKK4OU7MT1dknUMiK_gYxTDZOQ" alt=""></div>
+                    <h3>AWS Academy Graduate</h3>
+                    <p class="certification-issuer">AWS</p>
+                    <p class="certification-date">Déc. 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Guillaume BLAS - Tous droits réservés</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Guillaume-4" target="_blank" rel="noopener">
+                        <i class="devicon-github-original"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/guillaume-blas/" target="_blank" rel="noopener">
+                        <i class="devicon-linkedin-plain"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        window.addEventListener('load', function() {
-                document.body.classList.add('loaded');
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
+        });
+
+        // Burger menu
+        const burger = document.getElementById('burger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                burger.classList.remove('active');
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.timeline-item, .experience-card, .project-card, .certification-card').forEach(el => {
+            observer.observe(el);
+        });
     </script>
-    <div class="filter-back">
-        <%- include('header') %>
-
-        <div class="Infos">
-            <h1 id="welcome-me"><%="<h1> BLAS Guillaume </h1>"%></h1>
-            <p id="welcome-message">Apprentis Développeur, Bachelor 3ème année</p>
-            <p id="address">📍 Le Chesnay, France</p>
-        </div>
-        <div class="DivBouton">
-            <button class="Boutons" onclick="downloadCV()">Télécharger mon CV</button>
-            <button class="Boutons" id="BoutonMeRetrouver">Me Retrouver</button>
-        </div>
-    </div>
 </body>
-
+</html>
